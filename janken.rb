@@ -20,22 +20,12 @@ loop do #勝敗がつくまで繰り返す
     end
     puts "----------"
 
-    if my_hand == 0
-      puts "あなたはグーを出しました"
-    elsif my_hand == 1
-      puts "あなたはチョキを出しました"
-    else
-      puts "あなたはパーを出しました"
-    end
-
+    hands = ["グー", "チョキ", "パー"]
+    puts "あなたは#{hands[my_hand]}を出しました"
+    
     pc_hand = rand(0..2) #相手(PC)の手をランダム(0～2)で決定
-    if pc_hand == 0
-      puts "相手はグーを出しました"
-    elsif pc_hand == 1
-      puts "相手はチョキを出しました"
-    else
-      puts "相手はパーを出しました"
-    end
+    puts "相手は#{hands[pc_hand]}を出しました"
+
     puts "----------"
 
     if my_hand == pc_hand #あいこだった場合
